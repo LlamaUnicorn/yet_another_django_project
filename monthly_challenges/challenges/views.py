@@ -14,10 +14,11 @@ monthly_challenges = {
     "june": "Learn Django for at least 20 minutes every day!",
     "july": "Eat no meat for entire month",
     "august": "Walk for at least 20 minutes every day!",
-    "september": "Learn Django for at least 20 minutes every day!h",
+    "september": "Learn Django for at least 20 minutes every day!",
     "october": "Eat no meat for entire month",
     "november": "Walk for at least 20 minutes every day!",
-    "december": "Learn Django for at least 20 minutes every day!",
+    "december": None,
+    # "december": "Learn Django for at least 20 minutes every day!",
 }
 
 def index(request):
@@ -32,6 +33,8 @@ def index(request):
 def monthly_challenge(request, month):
     try:
         challenge_text = monthly_challenges[month]
+        print(challenge_text)
+        print(month)
         return render(request, "challenges/challenge.html", {
             "text": challenge_text,
             "month_name": month
