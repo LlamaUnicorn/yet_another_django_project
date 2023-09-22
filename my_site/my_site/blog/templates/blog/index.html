@@ -1,7 +1,12 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}
     My blog
+{% endblock %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "blog/index.css" %}">
 {% endblock %}
 
 {% block content %}
@@ -16,5 +21,36 @@
             <img src="" alt="Dave - The Author of This Blog" />
             <h2>DAVE'S BLOG</h2>
         </header>
+        <p>Hi, I am Dave and I like turtles</p>
+    </section>
+
+    <section id="latest-posts">
+        <h2>My Latest Thoughts</h2>
+
+        <ul>
+            <li>
+                <article class="post">
+                    <a href="">
+                        <img src="" alt="Mountain Hiking">
+                        <div class="post__content">
+                            <h3>Mountain Hiking</h3>
+                            <p>
+                                There's nothing like the views you get when hiking in the mountains. And I wasn't even prepared for what happened whilst I was enjoying the view!
+                            </p>
+                        </div>
+                    </a>
+                </article>
+            </li>
+        </ul>
+    </section>
+
+    <section id="about">
+        <h2>What I Do</h2>
+        <p>
+            I love programming. And turtles.
+        </p>
+        <p>
+            My goal is to keep on growing as a developer and turtle enthusiast
+        </p>
     </section>
 {% endblock %}
